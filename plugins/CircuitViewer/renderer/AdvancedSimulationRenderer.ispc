@@ -119,7 +119,7 @@ inline void indirectShading(
     varying vec3f& indirectShadingColor, varying float& indirectShadingPower)
 {
     vec3f backgroundColor = make_vec3f(0.f);
-    float distanceToIntersection = infinity;
+    float distanceToIntersection = inf;
     indirectShadingPower = 0.f;
 
     // Launch a random ray
@@ -938,7 +938,7 @@ void AdvancedSimulationRenderer_renderSample(uniform Renderer* uniform _self,
 {
     uniform AdvancedSimulationRenderer* uniform self =
         (uniform AdvancedSimulationRenderer * uniform)_self;
-    sample.ray.time = infinity;
+    sample.ray.time = inf;
     sample.rgb = AdvancedSimulationRenderer_shadeRay(self, sample);
 }
 
